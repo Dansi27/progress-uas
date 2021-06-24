@@ -7,7 +7,7 @@ class produk extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("List Produk")),
-      backgroundColor: Colors.orange[700],
+      backgroundColor: Colors.orange[100],
       body: ListView(
         shrinkWrap: true,
         padding: const EdgeInsets.fromLTRB(2.0, 10.0, 2.0, 10.0),
@@ -132,7 +132,7 @@ class ProductBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.orange[700],
+      color: Colors.orange[100],
       padding: EdgeInsets.all(2),
       height: 120,
       child: Card(
@@ -140,7 +140,7 @@ class ProductBox extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Image.asset(
-              "assets/" + gambar,
+              "assets/appimage/" + gambar,
               width: 150,
             ),
             Expanded(

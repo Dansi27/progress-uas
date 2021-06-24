@@ -1,4 +1,4 @@
-<h1>Create Berita</h1>
+<h1>Create Data Laptop</h1>
 
 <form action="/inputs" method="POST">
     @csrf

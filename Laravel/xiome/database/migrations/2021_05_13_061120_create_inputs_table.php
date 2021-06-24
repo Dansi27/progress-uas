@@ -17,8 +17,8 @@ class CreateInputsTable extends Migration
             $table->id();
             $table->string('namaBarang');
             $table->string('namaPembeli');
-            $table->string('Jumlah');
-            $table->string('harga');
+            $table->string('JumlahBarang');
+            $table->string('Harga');
             $table->timestamps();
         });
     }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'detail_about.dart' as detail;
+import 'detail.dart' as detail;
 
 class Menudrawer extends StatelessWidget {
   @override
@@ -19,20 +19,13 @@ class Menudrawer extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-                color: Colors.orangeAccent), // mewarnai background drawer
+                color: Colors.orange[800]), // mewarnai background drawer
           ),
           ListTile(
             //widget untuk drawer di bagian list tilenya
-            title: Text("Profile"),
+            onTap: () {},
+            title: Text("Profil"),
             trailing: Icon(Icons.account_circle),
-          ),
-          ListTile(
-            title: Text("Settings"),
-            trailing: Icon(Icons.settings),
-          ),
-          ListTile(
-            title: Text("Log Out"),
-            trailing: Icon(Icons.logout),
           ),
           ListTile(
             onTap: () {},
@@ -42,16 +35,21 @@ class Menudrawer extends StatelessWidget {
           ListTile(
             onTap: () {
               Navigator.of(context).push(new MaterialPageRoute(
-                builder: (BuildContext context) => detail.DetailMenu(
-                  nama: "Tentang Aplikasi Pemesanan LCD Xiaomi",
+                builder: (BuildContext context) => detail.DetailProduk(
+                  nama: "Media Penjualan Khusus LCD Xiaomi",
                   deskripsi:
-                      "Aplikasi Pemesanan LCD khusus brand Xiaomi.",
-                  gambar: "mi.png",
+                      "Aplikasi ini merupakan media penjualan LCD khusus brand Xiaomi, yang dimana memudahkan pengguna dalam membeli produk LCD Smartphone Xiaomi mereka.",
+                  gambar: "about.png",
                 ),
               ));
             },
-            title: Text(" About "),
-            trailing: Icon(Icons.info_outline),
+            title: Text("Tentang Aplikasi"),
+            trailing: Icon(Icons.help),
+          ),
+          ListTile(
+            onTap: () {},
+            title: Text("Keluar"),
+            trailing: Icon(Icons.logout),
           )
         ],
       ),
